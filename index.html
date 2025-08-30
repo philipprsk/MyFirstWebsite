@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Landmarks in LEGO | MartinsArt</title>
+    <meta name="description" content="Discover stunning LEGO recreations of iconic local landmarks and sights, meticulously crafted with attention to detail.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>MartinsArt</h1>
+                <span class="brand-subtitle">LEGO Local Landmarks</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Local Landmarks<br><span class="accent">Built with LEGO</span></h1>
+            <p class="hero-subtitle">Discover iconic local sights recreated in stunning detail with LEGO bricks. Each build captures the essence and beauty of our community's most beloved landmarks.</p>
+            <div class="hero-cta">
+                <a href="#gallery" class="btn-primary">Explore Gallery</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="lego-showcase">
+                <div class="lego-brick brick-red"></div>
+                <div class="lego-brick brick-blue"></div>
+                <div class="lego-brick brick-yellow"></div>
+                <div class="lego-brick brick-green"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Local Landmarks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">LEGO Pieces</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Hours of Work</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Passion Project</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Builds</h2>
+                <p>Each LEGO creation tells the story of our local heritage</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Builds</button>
+                <button class="filter-btn" data-filter="historic">Historic Sites</button>
+                <button class="filter-btn" data-filter="modern">Modern Buildings</button>
+                <button class="filter-btn" data-filter="landmarks">Landmarks</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Town Hall -->
+                <div class="gallery-item" data-category="historic">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/FF6B35/FFFFFF?text=Town+Hall+LEGO" alt="Town Hall LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Historic Town Hall</h3>
+                            <p>Victorian architecture • 1,200 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Bridge -->
+                <div class="gallery-item" data-category="landmarks">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=Stone+Bridge+LEGO" alt="Stone Bridge LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Heritage Stone Bridge</h3>
+                            <p>18th century design • 800 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library -->
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/45B7D1/FFFFFF?text=Library+LEGO" alt="Modern Library LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Central Library</h3>
+                            <p>Contemporary design • 1,500 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Church -->
+                <div class="gallery-item" data-category="historic">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/F7931E/FFFFFF?text=Church+LEGO" alt="Historic Church LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>St. Mary's Cathedral</h3>
+                            <p>Gothic revival • 2,000 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fire Station -->
+                <div class="gallery-item" data-category="modern">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/DC143C/FFFFFF?text=Fire+Station+LEGO" alt="Fire Station LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Central Fire Station</h3>
+                            <p>Art Deco style • 900 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clock Tower -->
+                <div class="gallery-item" data-category="landmarks">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/400x300/8E44AD/FFFFFF?text=Clock+Tower+LEGO" alt="Clock Tower LEGO Build" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Memorial Clock Tower</h3>
+                            <p>Edwardian era • 1,100 pieces</p>
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About the Project</h2>
+                    <p>Welcome to my passion project - recreating our community's most cherished landmarks using LEGO bricks. Each build is a labor of love, carefully researched and constructed to capture both the architectural details and the emotional significance of these special places.</p>
+                    
+                    <p>What started as a simple hobby has evolved into a comprehensive documentation of our local heritage. Through the medium of LEGO, I aim to celebrate the buildings that define our community's character and preserve their memory for future generations.</p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🏗️</div>
+                            <h4>Architectural Accuracy</h4>
+                            <p>Each build is researched using historical documents and photographs</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🧱</div>
+                            <h4>Original Techniques</h4>
+                            <p>Custom building techniques developed for unique architectural elements</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">📸</div>
+                            <h4>Documented Process</h4>
+                            <p>Complete build process documented with photos and instructions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400/34495E/FFFFFF?text=Builder+at+Work" alt="LEGO Builder at Work" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p>Have a local landmark you'd like to see in LEGO? Questions about the builds? I'd love to hear from you!</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@martinsart.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Social Media</h4>
+                                <p>@MartinsLegoArt</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Local Community Builder</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MartinsArt</h3>
+                    <p>Bringing local landmarks to life through LEGO</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                    <a href="#" aria-label="Email">📧</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MartinsArt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
