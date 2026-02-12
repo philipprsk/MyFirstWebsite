@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>MartinsArt — Kunstgalerie</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<nav class="nav">
+		<div class="container nav-inner">
+			<a class="brand" href="#home">
+				<span class="brand-text">MartinsArt</span>
+			</a>
+			<div class="nav-links">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#kontakt" class="nav-link">Kontakt</a>
+			</div>
+		</div>
+	</nav>
+
+	<header id="home" class="hero">
+		<div class="container">
+			<h1>Zeitgenössische Kunst</h1>
+			<p>Handverlesene Werke, reduziert auf das Wesentliche.</p>
+			
+			<div class="filter-tabs">
+				<button class="filter-btn active" data-filter="all">Alle</button>
+				<button class="filter-btn" data-filter="straubing">Straubing</button>
+				<button class="filter-btn" data-filter="regensburg">Regensburg</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="gallery" aria-label="Kunstwerke">
+			<!-- Regensburg: ganz nach oben -->
+			<article class="card" data-category="regensburg">
+				<img src="images/regensburger_dom.jpeg" alt="Regensburger Dom" loading="lazy" />
+				<div class="card-content">
+					<h2>Regensburger Dom</h2>
+					<p class="price">200€</p>
+					<p class="description">UNESCO-Welterbe – gotische Meisterarchitektur mit über 1800 LEGO-Steinen.</p>
+				</div>
+			</article>
+			<article class="card" data-category="regensburg">
+				<img src="images/regensburger_dom_front.jpeg" alt="Regensburger Dom Front" loading="lazy" />
+				<div class="card-content">
+					<h2>Regensburger Dom – Front</h2>
+					<p class="price">100€</p>
+					<p class="description">Die prächtige Westfassade des Doms als eigenständiges Kunstwerk.</p>
+				</div>
+			</article>
+
+			<article class="card" data-category="straubing">
+				<img src="images/stadtturm_straubing.jpeg" alt="Straubinger Stadtturm" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm</h2>
+					<p class="price">120€</p>
+					<p class="description">Das Wahrzeichen Straubings, majestätisch in LEGO-Steinen verewigt.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/peterskirche_fotografin.jpeg" alt="Kirche St. Peter" loading="lazy" />
+				<div class="card-content">
+					<h2>Kirche St. Peter</h2>
+					<p class="price">120€</p>
+					<p class="description">Barocke Eleganz der Peterskirche, detailgetreu nachgebildet.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/wasserturm_straubing.jpeg" alt="Wasserturm Straubing" loading="lazy" />
+				<div class="card-content">
+					<h2>Wasserturm Straubing</h2>
+					<p class="price">120€</p>
+					<p class="description">Historisches Wahrzeichen in moderner LEGO-Interpretation.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/rathaus_straubing.jpeg" alt="Rathaus" loading="lazy" />
+				<div class="card-content">
+					<h2>Rathaus</h2>
+					<p class="price">80€</p>
+					<p class="description">Das prächtige Straubinger Rathaus am Theresienplatz.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/friseurin.jpeg" alt="Friseurgebäude" loading="lazy" />
+				<div class="card-content">
+					<h2>Friseurgebäude</h2>
+					<p class="price">140€</p>
+					<p class="description">Charmantes Gebäude aus der Straubinger Innenstadt.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/geschwungenes_gebauede_straubing.jpeg" alt="Geschwungenes Gebäude" loading="lazy" />
+				<div class="card-content">
+					<h2>Geschwungenes Gebäude</h2>
+					<p class="price">80€</p>
+					<p class="description">Moderne Architektur mit einzigartiger Fassadenführung.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/standesamt_straubing.jpeg" alt="Standesamt Straubing" loading="lazy" />
+				<div class="card-content">
+					<h2>Standesamt Straubing</h2>
+					<p class="price">100€</p>
+					<p class="description">Ort unvergesslicher Momente, festgehalten in LEGO.</p>
+				</div>
+			</article>
+            <article class="card" data-category="straubing">
+				<img src="images/skyline_straubing_herbstlich.jpeg" alt="Skyline Straubing" loading="lazy" />
+				<div class="card-content">
+					<h2>Skyline Straubing</h2>
+					<p class="price">100€</p>
+					<p class="description">Straubings charakteristische Silhouette in warmen Herbstfarben.</p>
+				</div>
+            </article>
+                <article class="card" data-category="straubing">
+				<img src="images/eisstadion_tigers.jpg" alt="Eisstadion Tigers Straubing" loading="lazy" />
+				<div class="card-content">
+					<h2>Eisstadion Tigers Straubing</h2>
+					<p class="price">70€</p>
+					<p class="description">Heimat der Straubing Tigers – Eishockey-Leidenschaft in LEGO.</p>
+				</div>
+			</article>
+
+			<article class="card" data-category="straubing">
+				<img src="images/kettenkarussel_volksfest.jpeg" alt="Kettenkarussell Volksfest" loading="lazy" />
+				<div class="card-content">
+					<h2>Kettenkarussell Volksfest</h2>
+					<p class="price">60€</p>
+					<p class="description">Volksfest-Nostalgie in dynamischer LEGO-Umsetzung.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/volksfest_straubing.jpg" alt="Fahrgeschäfte Volksfest Straubing" loading="lazy" />
+				<div class="card-content">
+					<h2>Fahrgeschäfte am Straubinger Volksfest</h2>
+					<p class="price">60€</p>
+					<p class="description">Bunte Lichter und Fahrgeschäfte beim traditionsreichen Gäubodenvolksfest.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/riesenrad.jpg" alt="Riesenrad am Straubinger Volksfest" loading="lazy" />
+				<div class="card-content">
+					<h2>Riesenrad am Straubinger Volksfest</h2>
+					<p class="price">60€</p>
+					<p class="description">Hoch hinaus – das Riesenrad als Highlight des Volksfests.</p>
+				</div>
+			</article>
+			
+			<article class="card" data-category="straubing">
+				<img src="images/straubinger_herzerl.jpg" alt="Straubinger Herzerl" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Herzerl</h2>
+					<p class="price">60€</p>
+					<p class="description">Süße Tradition – das berühmte Straubinger Lebkuchenherz.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/stadtturm_klein_herbstlich.jpeg" alt="Straubinger Stadtturm klein" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm klein</h2>
+					<p class="price">60€</p>
+					<p class="description">Kompakte Version des Stadtturms in herbstlicher Stimmung.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/stadtturm_mini_weihnachtlich.jpeg" alt="Straubinger Stadtturm mini" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm mini</h2>
+					<p class="price">60€</p>
+					<p class="description">Mini-Ausgabe des ikonischen Straubinger Stadtturms.</p>
+				</div>
+			</article>
+			<article class="card" data-category="straubing">
+				<img src="images/mni_1.jpeg" alt="Mini1" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm mini</h2>
+					<p class="price">40€</p>
+					<p class="description">Festliche Mini-Ausgabe – perfekt zur Weihnachtszeit.</p>
+				</div>
+			</article>
+            <article class="card" data-category="straubing">
+				<img src="images/mni_2.jpeg" alt="Mini2" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm mini</h2>
+					<p class="price">40€</p>
+					<p class="description">Festliche Mini-Ausgabe – perfekt zur Weihnachtszeit.</p>
+				</div>
+			</article>
+            <article class="card" data-category="straubing">
+				<img src="images/mini_3.jpeg" alt="Mini3" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm mini</h2>
+					<p class="price">40€</p>
+					<p class="description">Festliche Mini-Ausgabe – perfekt zur Weihnachtszeit.</p>
+				</div>
+			</article>
+            <article class="card" data-category="straubing">
+				<img src="images/mini_4.jpeg" alt="Mini4" loading="lazy" />
+				<div class="card-content">
+					<h2>Straubinger Stadtturm mini</h2>
+					<p class="price">40€</p>
+					<p class="description">Festliche Mini-Ausgabe – perfekt zur Weihnachtszeit.</p>
+				</div>
+			</article>
+            <article class="card" data-category="straubing">
+				<img src="images/rechteckiges_steingebauede.jpeg" alt="Namaste - das schmale Gebäude" loading="lazy" />
+				<div class="card-content">
+					<h2>Namaste - das schmale Gebäude</h2>
+					<p class="price">60€</p>
+					<p class="description">Festliche Mini-Ausgabe – perfekt zur Weihnachtszeit.</p>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<section id="kontakt" class="contact">
+		<div class="container">
+			<h2>Kontakt</h2>
+			<p class="contact-intro">Haben Sie Interesse an einem Kunstwerk? Zögern Sie nicht, uns zu kontaktieren.</p>
+			
+			<!-- Kontaktformular -->
+			<div class="contact-form-wrapper">
+				<form class="contact-form" id="contactForm">
+						<!-- Web3Forms Access Key -->
+						<input type="hidden" name="access_key" value="955cd944-a67a-4e7f-97d2-6761e2f86f4c" />
+						
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" required />
+						</div>
+						<div class="form-group">
+							<label for="email">E-Mail</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="form-group">
+							<label for="message">Nachricht</label>
+							<textarea id="message" name="message" rows="6" required></textarea>
+						</div>
+						
+						<!-- Web3Forms Configuration -->
+						<input type="hidden" name="subject" value="Neue Nachricht von MartinsArt Website" />
+						<input type="hidden" name="from_name" value="MartinsArt Kontaktformular" />
+						<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+						
+						<button type="submit" class="btn-primary">
+							<span class="button-text">Nachricht senden</span>
+						</button>
+					</form>
+				</div>
+
+				<!-- Kontaktdaten und QR-Code nebeneinander -->
+				<div class="contact-grid">
+					<div class="contact-info-card">
+						<h3>Kontaktdaten</h3>
+						
+						<div class="contact-item">
+							<div class="contact-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+									<polyline points="22,6 12,13 2,6"/>
+								</svg>
+							</div>
+							<div class="contact-details">
+								<span class="contact-label">E-Mail</span>
+								<a href="mailto:m.rosanka@t-online.de" class="contact-value">m.rosanka@t-online.de</a>
+							</div>
+						</div>
+
+						<div class="contact-item">
+							<div class="contact-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+								</svg>
+							</div>
+							<div class="contact-details">
+								<span class="contact-label">Telefon</span>
+								<a href="tel:+4915158752316" class="contact-value">+49 151 58752316</a>
+							</div>
+						</div>
+
+						<div class="contact-item">
+							<div class="contact-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+									<circle cx="12" cy="10" r="3"/>
+								</svg>
+							</div>
+							<div class="contact-details">
+								<span class="contact-label">Adresse</span>
+								<a href="https://maps.google.com/?q=Sachsenring+65,+94315+Straubing" target="_blank" rel="noopener noreferrer" class="contact-value">
+									Sachsenring 65<br>
+									94315 Straubing
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="qr-code-card">
+						<h3>Kontakt speichern</h3>
+						<p class="qr-description">Scannen Sie den QR-Code, um unsere Kontaktdaten direkt zu speichern</p>
+						<div class="qr-code-container">
+							<img src="images/qr_code.png" alt="QR-Code für Kontaktdaten" class="qr-code-image">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<p>© 2026 MartinsArt. Alle Rechte vorbehalten.</p>
+		</div>
+	</footer>
+
+	<!-- Modal for enlarged image -->
+	<div class="modal" id="imageModal">
+		<button class="modal-close" aria-label="Schließen">&times;</button>
+		<div class="modal-content">
+			<div class="modal-image-wrapper">
+				<img src="" alt="" id="modalImage" />
+			</div>
+			<div class="modal-info">
+				<h2 id="modalTitle"></h2>
+				<p class="price" id="modalPrice"></p>
+				<p class="description" id="modalDescription"></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
