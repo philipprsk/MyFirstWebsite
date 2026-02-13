@@ -17,12 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
 			const title = this.querySelector('h2').textContent;
 			const price = this.querySelector('.price').textContent;
 			const description = this.querySelector('.description').textContent;
+			const details = this.getAttribute('data-details') || '';
 			
 			modalImage.src = img.src;
 			modalImage.alt = img.alt;
 			modalTitle.textContent = title;
 			modalPrice.textContent = price;
-			modalDescription.textContent = description;
+			
+			// Combine description with details if available
+			if (details) {
+				modalDescription.innerHTML = description + '<br><br>' + details;
+			} else {
+				modalDescription.textContent = description;
+			}
 			
 			modal.classList.add('active');
 			document.body.style.overflow = 'hidden';
