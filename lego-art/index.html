@@ -54,23 +54,60 @@
 			padding: 16px;
 			box-sizing: border-box;
 		}
+
+		/* Modal: grid layout on desktop, stacked on mobile; smaller text for mobile */
+		.modal .modal-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px;
+			align-items: start;
+			padding: 18px;
+		}
+
 		.modal-image-wrapper {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 8px 0;
+			width: 100%;
+			display:flex;
+			align-items:center;
+			justify-content:center;
 		}
 		.modal-image-wrapper img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-			border-radius: 6px;
-			object-fit: contain;
+			max-width:100%;
+			max-height:60vh;
+			object-fit:contain;
+			border-radius:8px;
 		}
-		@media (max-width: 600px) {
-			.modal .modal-content { padding: 12px; border-radius: 8px; max-height: 94vh; }
-			.modal-image-wrapper img { max-height: 60vh; }
-			.modal-info { padding-top: 8px; }
+
+		.modal-info {
+			overflow:auto;
+			max-height:60vh;
+		}
+		.modal-info h2 { margin-top:0; font-size:1.1rem; }
+		.modal-info .price { font-size:1rem; margin:6px 0; }
+		.modal-info .description { font-size:0.95rem; color:#444; line-height:1.4; }
+
+		@media (max-width: 720px) {
+			.modal .modal-content {
+				grid-template-columns: 1fr;
+				padding: 12px;
+			}
+			.modal-image-wrapper img {
+				max-height:50vh;
+				margin-bottom:8px;
+			}
+			.modal-info {
+				max-height: none;
+				padding-top: 6px;
+			}
+			.modal-info h2 { font-size:1rem; }
+			.modal-info .price { font-size:0.95rem; }
+			.modal-info .description { font-size:0.9rem; }
+		}
+
+		/* ensure modal close button is tappable on mobile */
+		.modal-close {
+			font-size: 1.4rem;
+			padding: 8px 10px;
+			line-height:1;
 		}
 	</style>
 </head>
