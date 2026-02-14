@@ -5,6 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>MartinsArt — Kunstgalerie</title>
 	<link rel="stylesheet" href="styles.css" />
+	<style>
+		/* compact Apple-style hero intro (between Home and About) */
+		.hero-intro {
+			display:flex;
+			justify-content:center;
+			padding:20px 12px;
+			background: linear-gradient(180deg,#ffffff, #fbfbfd);
+		}
+		.hero-intro .hero-inner{
+			max-width:980px;
+			width:100%;
+			text-align:center;
+			padding:14px 18px;
+			border-radius:12px;
+			background: rgba(255,255,255,0.9);
+			box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+			backdrop-filter: blur(4px);
+		}
+		.hero-inner h2 { margin:0; font-size:1.25rem; font-weight:700; }
+		.hero-inner p.lead { margin:8px 0 0; color:#575b63; line-height:1.4; }
+		.hero-inner .hero-cta { margin-top:12px; }
+		@media (max-width:600px){
+			.hero-inner { padding:12px; border-radius:10px; }
+			.hero-inner h2 { font-size:1.05rem; }
+		}
+	</style>
 </head>
 <body>
 	<nav class="nav">
@@ -33,20 +59,21 @@
 		</div>
 	</header>
 
+
 	<main class="container">
-		<section class="gallery" aria-label="Kunstwerke">
+		<section id="gallery" class="gallery" aria-label="Kunstwerke">
 			<!-- Regensburg: ganz nach oben -->
 			<article class="card" data-category="regensburg"
 			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Freistehend<br>• Rahmen: Nicht vorhanden<br>• Größe: 17,5×33,5×27 cm (B/L/H)">
 				<img src="images/regensburger_dom.jpeg" alt="Regensburger Dom" loading="lazy" />
 				<div class="card-content">
 					<h2>Regensburger Dom</h2>
-					<p class="price">200€</p>
+					<p class="price">180€</p>
 					<p class="description">UNESCO-Welterbe – gotische Meisterarchitektur</p>
 				</div>
 			</article>
 			<article class="card" data-category="regensburg"
-			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 80€<br>• Größe: 23×32×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Preis: 80€<br>• Größe: 23×32×6 cm (B/H/T)">
 				<img src="images/regensburger_dom_front.jpeg" alt="Regensburger Dom Front" loading="lazy" />
 				<div class="card-content">
 					<h2>Regensburger Dom – Front</h2>
@@ -56,7 +83,7 @@
 			</article>
 
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Buche<br>• Größe: 25×50×5 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in buche<br>• Größe: 25×50×5 cm (B/H/T)">
 				<img src="images/stadtturm_straubing.jpeg" alt="Straubinger Stadtturm" loading="lazy" />
 				<div class="card-content">
 					<h2>Straubinger Stadtturm</h2>
@@ -65,16 +92,16 @@
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 80€<br>• Größe: 23×32×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 25×50×5 cm (B/H/T)">
 				<img src="images/peterskirche_fotografin.jpeg" alt="Kirche St. Peter" loading="lazy" />
 				<div class="card-content">
 					<h2>Kirche St. Peter</h2>
 					<p class="price">100€</p>
-					<p class="description">Barocke Eleganz der Peterskirche, detailgetreu nachgebildet.</p>
+					<p class="description">Spätromanische Eleganz der Peterskirche, detailgetreu nachgebildet.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Buche<br>• Größe: 25×50×5 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in buche<br>• Größe: 25×50×5 cm (B/H/T)">
 				<img src="images/wasserturm_straubing.jpeg" alt="Wasserturm Straubing" loading="lazy" />
 				<div class="card-content">
 					<h2>Wasserturm Straubing</h2>
@@ -83,16 +110,16 @@
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 80€<br>• Größe: 23×32×6 cm (B/H/T)">
+			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Das Design entspricht dem Gebäude vor dem Brand<br>• Größe: 23×32×6 cm (B/H/T)">
 				<img src="images/rathaus_straubing.jpeg" alt="Rathaus Straubing" loading="lazy" />
 				<div class="card-content">
 					<h2>Rathaus Straubing</h2>
 					<p class="price">80€</p>
-					<p class="description">Das prächtige Straubinger Rathaus am Theresienplatz.</p>
+					<p class="description">Das prächtige Straubinger Rathaus.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Größe: 25×50×5 cm (B/H/T)">
+			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 23×32×6 cm (B/H/T)">
 				<img src="images/geschwungenes_gebauede_straubing.jpeg" alt="Altstadtgebäude (Nanu Nana)" loading="lazy" />
 				<div class="card-content">
 					<h2>Altstadtgebäude (Nanu Nana)</h2>
@@ -101,25 +128,25 @@
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Größe: 23×32×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 23×32×6 cm (B/H/T)">
 				<img src="images/rechteckiges_steingebauede.jpeg" alt="Schmales Altstadtgebäude Restaurant Namaste" loading="lazy" />
 				<div class="card-content">
-					<h2>Schmales Altstadtgebäude, Restaurant Namaste</h2>
+					<h2>Schmales Altstadtgebäude (Restaurant Namaste)</h2>
 					<p class="price">80€</p>
 					<p class="description">Schmales, charmantes Altstadtgebäude mit markanter Fassade und feinen dekorativen Details.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 80€<br>• Größe: 23×32×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 23×32×6 cm (B/H/T)">
 				<img src="images/sparkasseng_straubing.jpeg" alt="Altstadtgebäude Sparkasse" loading="lazy" />
 				<div class="card-content">
-					<h2>Altstadtgebäude Sparkasse</h2>
+					<h2>Altstadtgebäude (Sparkasse)</h2>
 					<p class="price">80€</p>
-					<p class="description">Markantes Altstadtgebäude – Sparkasse.</p>
+					<p class="description">Markantes Altstadtgebäude.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Größe: 38,5×31,5×5,5 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 38,5×31,5×5,5 cm (B/H/T)">
 				<img src="images/standesamt_straubing.jpeg" alt="Standesamt Straubing" loading="lazy" />
 				<div class="card-content">
 					<h2>Standesamt Straubing</h2>
@@ -128,7 +155,7 @@
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-                     data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Buche<br>• Größe: 25×50×5 cm (B/H/T)">
+                     data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in buche<br>• Größe: 25×50×5 cm (B/H/T)">
 				<img src="images/skyline_straubing_herbstlich.jpeg" alt="Skyline Straubing" loading="lazy" />
 				<div class="card-content">
 					<h2>Straubing Sehenswürdigkeiten</h2>
@@ -137,7 +164,7 @@
 				</div>
             </article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Größe: 15,5×20,5×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 15,5×20,5×6 cm (B/H/T)">
 				<img src="images/stadtturm_mini_weihnachtlich.jpeg" alt="Straubinger Stadtturm klein" loading="lazy" />
 				<div class="card-content">
 					<h2>Straubinger Stadtturm klein</h2>
@@ -146,16 +173,16 @@
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Im Ganzen oder angebissen <br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
+			         data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Im Ganzen oder angebissen <br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
 				<img src="images/straubinger_herzerl.jpg" alt="Straubinger Herzerl" loading="lazy" />
 				<div class="card-content">
 					<h2>Straubinger Herzerl</h2>
 					<p class="price">50€</p>
-					<p class="description">Süße Tradition – das berühmte Straubinger Lebkuchenherz.</p>
+					<p class="description">Süße Tradition – das berühmte Straubinger Lebkuchenherzerl.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz, Weiß oder Buche<br>• Größe: 27×27×6 cm (B/H/T)">
+			data-details="<strong>Details:</strong><br>• Status: Verfügbar mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz, weiß oder buche<br>• Größe: 27×27×6 cm (B/H/T)">
 				<img src="images/stadtturm_klein_herbstlich.jpeg" alt="Straubinger Stadtturm mittelgroß" loading="lazy" />
 				<div class="card-content">
 					<h2>Straubinger Stadtturm mittelgroß</h2>
@@ -181,25 +208,25 @@
 			</article>-->
 
 			<article class="card" data-category="straubing"
-				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
+				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 27×27×6 cm (B/H/T)">
 				<img src="images/kettenkarussel_volksfest.jpeg" alt="Kettenkarussell Volksfest" loading="lazy" />
 				<div class="card-content">
-					<h2>Kettenkarussell Volksfest</h2>
+					<h2>Kettenkarussell am Straubinger Volksfest</h2>
 					<p class="price">50€</p>
-					<p class="description">Volksfest-Nostalgie.</p>
+					<p class="description">Nostalgie pur.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
+				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Größe: 27×27×6 cm (B/H/T)">
 				<img src="images/volksfest_straubing.jpg" alt="Fahrgeschäfte Volksfest Straubing" loading="lazy" />
 				<div class="card-content">
 					<h2>Fahrgeschäfte am Straubinger Volksfest</h2>
 					<p class="price">50€</p>
-					<p class="description">Bunte Lichter und Fahrgeschäfte am traditionsreichen Gäubodenvolksfest.</p>
+					<p class="description">Wilde Maus und hohes Kettenkarussell am Gäubodenvolksfest.</p>
 				</div>
 			</article>
 			<article class="card" data-category="straubing"
-				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in Schwarz oder Weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
+				data-details="<strong>Details:</strong><br>• Status: Mit Wartezeit<br>• Ausführung: Im Rahmen<br>• Rahmen: Holz mit Glas in schwarz oder weiß<br>• Preis: 50€<br>• Größe: 27×27×6 cm (B/H/T)">
 				<img src="images/riesenrad.jpg" alt="Riesenrad am Straubinger Volksfest" loading="lazy" />
 				<div class="card-content">
 					<h2>Riesenrad am Straubinger Volksfest</h2>
@@ -207,36 +234,40 @@
 					<p class="description">Hoch hinaus – das Riesenrad als Highlight des Volksfests.</p>
 				</div>
 			</article>
-			<article class="card" data-category="straubing">
+			<article class="card" data-category="straubing"
+			data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen aus Bausteinen ohne Glas oder Holz mit Glas in schwarz oder weiß<br>• Größe: 16×16×5 cm (B/H/T)">
 				<img src="images/mni_1.jpeg" alt="Mini1" loading="lazy" />
 				<div class="card-content">
-					<h2>Altstadtgebäude am Theresienplatz, Restaurant Zum Geiss</h2>
+					<h2>Altstadtgebäude am Theresienplatz (Wirtshaus zum Geiss)</h2>
 					<p class="price">40€</p>
-					<p class="description">.</p>
+					<p class="description"></p>
 				</div>
 			</article>
-            <article class="card" data-category="straubing">
+            <article class="card" data-category="straubing"
+			data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen aus Bausteinen ohne Glas oder Holz mit Glas in schwarz oder weiß<br>• Größe: 16×16×5 cm (B/H/T)">
 				<img src="images/mni_2.jpeg" alt="Mini2" loading="lazy" />
 				<div class="card-content">
-					<h2>Altstadtgebäude, Kleidungsgeschäft</h2>
+					<h2>Altstadtgebäude (Kleidungsgeschäft)</h2>
 					<p class="price">40€</p>
-					<p class="description">.</p>
+					<p class="description"></p>
 				</div>
 			</article>
-            <article class="card" data-category="straubing">
+            <article class="card" data-category="straubing"
+			data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen aus Bausteinen ohne Glas oder Holz mit Glas in schwarz oder weiß<br>• Größe: 16×16×5 cm (B/H/T)">
 				<img src="images/mini_3.jpeg" alt="Mini3" loading="lazy" />
 				<div class="card-content">
 					<h2>Kombination Restaurant Namaste und Kleidungsgeschäft</h2>
 					<p class="price">40€</p>
-					<p class="description">.</p>
+					<p class="description"></p>
 				</div>
 			</article>
-            <article class="card" data-category="straubing">
+            <article class="card" data-category="straubing"
+			data-details="<strong>Details:</strong><br>• Status: Sofort verfügbar<br>• Ausführung: Im Rahmen<br>• Rahmen aus Bausteinen ohne Glas oder Holz mit Glas in schwarz oder weiß<br>• Größe: 16×16×5 cm (B/H/T)">
 				<img src="images/mini_4.jpeg" alt="Mini4" loading="lazy" />
 				<div class="card-content">
-					<h2>Altstadtgebäude, Café Krönner</h2>
+					<h2>Altstadtgebäude (Café Krönner)</h2>
 					<p class="price">40€</p>
-					<p class="description">.</p>
+					<p class="description"></p>
 				</div>
 			</article>
 		</section>
