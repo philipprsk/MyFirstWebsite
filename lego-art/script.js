@@ -250,4 +250,21 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	}
+
+	// Mobile-fix: Entferne lazy-loading auf kleineren Bildschirmen und preload erste modal-Bilder
+	(() => {
+		const isMobile = window.matchMedia('(max-width:800px)').matches || ('ontouchstart' in window);
+		if (isMobile) {
+			document.querySelectorAll('img[loading="lazy"]').forEach(img => img.removeAttribute('loading'));
+		}
+		// Preload first image from data-images (falls vorhanden) to speed up modal open
+		document.querySelectorAll('.card[data-images]').forEach(card => {
+			const attr = card.getAttribute('data-images') || '';
+			const first = attr.split(',').map(s => s.trim()).find(Boolean);
+			if (first) {
+				const im = new Image();
+				im.src = first;
+			}
+		});
+	})();
 });
