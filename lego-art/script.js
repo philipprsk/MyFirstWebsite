@@ -10,50 +10,99 @@ document.addEventListener('DOMContentLoaded', function() {
 	const modalDescription = document.getElementById('modalDescription');
 	const modalClose = document.querySelector('.modal-close');
 	
-	// Modal functionality
+	// Modal functionality (improved for mobile & multi-image support)
 	document.querySelectorAll('.card').forEach(card => {
 		card.addEventListener('click', function() {
-			const img = this.querySelector('img');
-			const title = this.querySelector('h2').textContent;
-			const price = this.querySelector('.price').textContent;
-			const description = this.querySelector('.description').textContent;
+			// Prefer data-images if present (comma separated), otherwise use card img
+			const imagesAttr = this.getAttribute('data-images');
+			let images = [];
+			if (imagesAttr) {
+				images = imagesAttr.split(',').map(s => s.trim()).filter(Boolean);
+			}
+			const imgEl = this.querySelector('img');
+			if (!images.length && imgEl) images = [ imgEl.getAttribute('src') || imgEl.src ];
+
+			const title = this.querySelector('h2')?.textContent || '';
+			const price = this.querySelector('.price')?.textContent || '';
+			const description = this.querySelector('.description')?.textContent || '';
 			const details = this.getAttribute('data-details') || '';
-			
-			modalImage.src = img.src;
-			modalImage.alt = img.alt;
+
+			// Show first available image, handle load/fallback
+			const srcToLoad = images[0] || '';
+			modalImage.removeAttribute('src');
+			modalImage.alt = imgEl?.alt || title;
+
+			// Ensure modal-content scrolls to top on open
+			const modalContent = modal.querySelector('.modal-content');
+			if (modalContent) modalContent.scrollTop = 0;
+
+			if (srcToLoad) {
+				// show a tiny loading state (optional)
+				modalImage.style.opacity = '0';
+				modalImage.src = srcToLoad;
+				modalImage.onload = () => {
+					modalImage.style.transition = 'opacity .18s ease';
+					modalImage.style.opacity = '1';
+				};
+				// fallback if image fails
+				modalImage.onerror = () => {
+					// try card image as fallback
+					if (imgEl && imgEl.getAttribute('src') !== srcToLoad) {
+						modalImage.src = imgEl.getAttribute('src') || imgEl.src;
+					} else {
+						// remove image if nothing loads
+						modalImage.style.opacity = '0';
+						modalImage.removeAttribute('src');
+					}
+				};
+			} else {
+				modalImage.removeAttribute('src');
+			}
+
 			modalTitle.textContent = title;
 			modalPrice.textContent = price;
-			
-			// Combine description with details if available
+
+			// Compose description/details (allow HTML from data-details)
 			if (details) {
-				modalDescription.innerHTML = description + '<br><br>' + details;
+				modalDescription.innerHTML = (description ? escapeHtml(description) + '<br><br>' : '') + details;
 			} else {
-				modalDescription.textContent = description;
+				modalDescription.textContent = description || '';
 			}
-			
+
 			modal.classList.add('active');
 			document.body.style.overflow = 'hidden';
 		});
 	});
 	
-	// Close modal
+	// Close modal (keeps existing behavior)
 	function closeModal() {
 		modal.classList.remove('active');
 		document.body.style.overflow = '';
+		// cleanup image src to release memory on mobile
+		if (modalImage) {
+			modalImage.removeAttribute('src');
+		}
 	}
 
-	modalClose.addEventListener('click', closeModal);
+	// ensure modalClose exists before attaching
+	if (modalClose) {
+		modalClose.addEventListener('click', closeModal);
+	}
 	modal.addEventListener('click', function(e) {
-		if (e.target === modal) {
-			closeModal();
-		}
+		if (e.target === modal) closeModal();
 	});
-	
 	document.addEventListener('keydown', function(e) {
-		if (e.key === 'Escape' && modal.classList.contains('active')) {
-			closeModal();
-		}
+		if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
 	});
+
+	// small helper to escape plain text before inserting + preserve plain string usage
+	function escapeHtml(str) {
+		return String(str).replace(/[&<>"'`=\/]/g, function(s) {
+			return ({
+				'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','/':'&#x2F;','`':'&#x60;','=':'&#x3D;'
+			})[s];
+		});
+	}
 
 	// Filter Funktionalität
 	document.querySelectorAll('.filter-btn').forEach(btn => {
